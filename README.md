@@ -12,7 +12,9 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-develop-2でhome#indexは完成？
+develop-2でhome#index&scssは完成？
+develop-3でbooks#index&scssの見た目は大体完成？
+
 * Database initialization
 
 * How to run the test suite
