@@ -6,7 +6,7 @@
     <meta name="csrf-param" content="authenticity_token" />
 <meta name="csrf-token" content="W2OTwdRmXghNw0E2y41FlyvI66P6JyAlN/gUMyFHmynk6fzontjzbKavmRA3dEdjs1LI4Nmnf5hCqi5PFdQzyA==" />
 
-    <link rel="stylesheet" media="all" href="books..scss" data-turbolinks-track="reload" />
+    <link rel="stylesheet" media="all" href="books.scss" data-turbolinks-track="reload" />
     <script src="/assets/application-4e370d3723b6f204426a9414077d365ea07814cce5619ae24fb7e581988f19ed.js" data-turbolinks-track="reload"></script>
   </head>
 
@@ -24,36 +24,18 @@
     </tr>
   </thead>
 
+
+  
   <tbody>
-      <tr>
-
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-        <td><a class="show_227595" href="/books/227595">Show</a></td>
-        <td><a class="edit_227595" href="/books/227595/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_227595" rel="nofollow" data-method="delete" href="/books/227595">Destroy</a></td>
-      </tr>
-      <tr>
-        <td>トラブル知らずのシステム設計</td>
-        <td>システム設計の要点を図解で説明してくれます</td>
-        <td><a class="show_227596" href="/books/227596">Show</a></td>
-        <td><a class="edit_227596" href="/books/227596/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_227596" rel="nofollow" data-method="delete" href="/books/227596">Destroy</a></td>
-      </tr>
-
-
-
-
         <% @books.each do |book| %>
-          <div class="book-item">
+          <tr="book-item">
             <section class="book-text">
-              <h3 class="book-text-headline"><%= link_to book.title, book_path(blog) %></h3>
+              <h3 class="book-text-headline"><%= link_to book.title, book_path(book) %></h3>
               <p class="book-date"><%= book.created_at %></p>
-              <span class="category"><%= book.category %></span>
+             
             </section>
           </div>
         <% end %>
-
   </tbody>
 </table>
 

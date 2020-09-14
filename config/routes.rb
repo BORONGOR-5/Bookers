@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   
   root to: 'home#index'
   
+  delete 'books/:id' => 'books#destroy'
+
+  
+  
+  
 end
