@@ -26,26 +26,15 @@
 
   <tbody>
       <tr>
-        <td>リーダブルコード</td>
-        <td>より良いコードを書くためのシンプルで実践的なテクニック</td>
-        <td><a class="show_227522" href="/books/227522">Show</a></td>
-        <td><a class="edit_227522" href="/books/227522/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_227522" rel="nofollow" data-method="delete" href="/books/227522">Destroy</a></td>
-      </tr>
-      <tr>
-        <td>トラブル知らずのシステム設計</td>
-        <td>システム設計の要点を図解で説明してくれます</td>
-        <td><a class="show_227523" href="/books/227523">Show</a></td>
-        <td><a class="edit_227523" href="/books/227523/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_227523" rel="nofollow" data-method="delete" href="/books/227523">Destroy</a></td>
-      </tr>
-      <tr>
-        <td>たのしいRuby</td>
-        <td>Rubyの入門におすすめです</td>
-        <td><a class="show_227524" href="/books/227524">Show</a></td>
-        <td><a class="edit_227524" href="/books/227524/edit">Edit</a></td>
-        <td><a data-confirm="Are you sure?" class="destroy_227524" rel="nofollow" data-method="delete" href="/books/227524">Destroy</a></td>
-      </tr>
+        <% @books.each do |book| %>
+          <div class="book-item">
+            <section class="book-text">
+              <h3 class="book-text-headline"><%= link_to book.title, book_path(blog) %></h3>
+              <p class="book-date"><%= book.created_at %></p>
+              <span class="category"><%= book.category %></span>
+            </section>
+          </div>
+        <% end %>
 
   </tbody>
 </table>
