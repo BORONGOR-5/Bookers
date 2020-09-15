@@ -11,7 +11,7 @@
 
   <body>
     <h1>Editing Book</h1>
-    
+
       <%= form_with model:@book, url:"edit_book_path(book)/edit", local:true do |f| %>
         <h4>Title</h4>
         <%= f.text_field :title %>
@@ -22,27 +22,11 @@
 
 
 
-<!--formの中消す-->
-<form class="edit_book" id="edit_book_path(book.id)" action="/books/book_path(book.id)" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="JMdzeNtmrW47nRiEJ1aF8ZFj4q4Met7cAmA2Ts4Ir1MWRJnnSv2i/cHdkjya7NWvQJIzk4BrRADrbOrGA8ZyfA==" />
+<%= link_to "Show", book_path(@book) %>
+<%= link_to "Back", books_path %>
 
-  <div class="field">
-    <label for="book_title">Title</label>
-    <input class="book_title" type="text" value="book" name="book[title]" id="book.title" />
-  </div>
-
-  <div class="field">
-    <label for="book_body">Body</label>
-    <textarea class="bookbody" name="book[body]" id="book.body">
-  </textarea>
-  </div>
-
-  <div class="actions">
-    <input type="submit" name="commit" value="Update Book" data-disable-with="Update Book" />
-  </div>
-</form>
-
-<a class="show" href="book_path(book)">Show</a>
-<a class="back" href="/books">Back</a>
+<!--<a class="show" href="@book">Show</a>-->
+<!--<a class="back" href="/books">Back</a>-->
 
   </body>
 </html>
